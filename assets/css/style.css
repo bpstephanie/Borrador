@@ -15,14 +15,24 @@ main {
     padding: 8%;
 }
 
+.info-page h1 {
+    font-size: 200%;
+    text-align: center;
+}
+
 .info-divs {
     background-color: rgb(243, 208, 215);
     margin: 5%;
-    padding: 10%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.info-list {
+    margin-left: 10%;
 }
 
 .keyfacts-left {
-    width: 300px;
+    width: 80%;
     margin: 50px auto;
     background:  rgb(226, 59, 95);
     padding: 20px;
@@ -31,6 +41,9 @@ main {
     color:#fff;
     font-family: arial;
     position:relative;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 5px 8px rgb(54, 14, 23);
 }
 
 .keyfacts-left:before {
@@ -43,11 +56,11 @@ main {
     border-top: 10px solid  rgb(226, 59, 95);
     border-bottom: 10px solid transparent;
     left: -20px;
-    top: 10px;
+    top: 15px;
 }
 
 .keyfacts-right {
-    width: 300px;
+    width: 80%;
     margin: 50px auto;
     background:  rgb(226, 59, 95);
     padding: 20px;
@@ -56,6 +69,9 @@ main {
     color:#fff;
     font-family: arial;
     position:relative; 
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: -5px 8px rgb(54, 14, 23);
 }
 
 .keyfacts-right:before {
@@ -68,5 +84,19 @@ main {
     border-top: 10px solid  rgb(226, 59, 95);
     border-bottom: 10px solid transparent;
     right: -20px;
-    top: 10px;
+    top: 15px;
+}
+
+/* Media query: landscape phones(768px and up)*/
+@media screen and (min-width: 768px) {
+   .keyfacts-left {
+    left: 0;
+    margin-left: 0;
+   }
+
+   .keyfacts-right {
+    right: 0;
+    margin-right: 0;
+   }
+
 }
