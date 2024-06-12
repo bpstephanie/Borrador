@@ -1,6 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    background-color: hsl(284, 69%, 79%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Header styles */
+header {
+    background-color: rgb(208, 122, 240);
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    justify-content: space-between;
+    align-items: baseline;
+    border-radius: 0;
+    letter-spacing: 0.1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+#logo {
+    color: black;
+    font-family: 'Poetsen One', sans-serif;
 }
