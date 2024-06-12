@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap');
 /* Asterisk wildcard selector to override default styles added by the browser*/
 * {
     padding: 0;
@@ -8,10 +8,11 @@
 
 /* General styles */
 body {
-    background-color: hsl(284, 69%, 79%);
+    background-color: hsl(283, 60%, 84%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Noto Sans', san-serif;
 }
 
 .flex {
@@ -25,19 +26,122 @@ header {
     position: fixed;
     z-index: 99;
     width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
+    box-shadow: 0 4px 4px #ffffff;
     justify-content: space-between;
     align-items: baseline;
     border-radius: 0;
     letter-spacing: 0.1rem;
+    padding-bottom: 5px;
 }
 
 header a {
     text-decoration: none;
-    color: #333;
+    color: rgb(52, 15, 66);
 }
 
 #logo {
-    color: black;
+    color: rgb(38, 22, 44);
     font-family: 'Poetsen One', sans-serif;
+    font-size: 300%;
+}
+
+/* Nav bar styles */
+.nav-menu-list {
+    font-size: 120%;
+    list-style-type: none;
+    letter-spacing: 1px;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: rgb(208, 122, 240);
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #ffffff;
+    display: none;
+    top: 100%;
+}
+
+/* Nav Toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 200%;
+}
+
+main {
+    margin-top: 65px;
+}
+
+/* Footer Styles*/
+footer {
+    text-align: center;
+    background-color: rgb(208, 122, 240);
+    border-radius: 0px;
+    margin-top: auto;
+}
+
+footer div {
+    padding-top: 2%;
+}
+
+#socialmedia-icons {
+    flex-flow: row-wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    padding: 1% 8% 1% 4%;
+}
+
+#footer-email {
+    padding-top: 3%;
+}
+
+#socialmedia-icons i {
+    color: black;
+}
+
+#socialmedia-icons a {
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 180%;
+    margin: 4px 2px;
+    border-radius: 10px;
+}
+
+#footer-email a {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#socialmedia-icons i:hover,
+#footer-email a:hover {
+    color: white;
+    font-size: 150%;
+}
+
+/* Media query: landscape phones(576px and up)*/
+@media screen and (min-width: 576px) {
+    .big-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #footer-about {
+        max-width: 33%;
+    }
 }
